@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>for syaraa💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN -->
+<section id="login" class="screen center">
+  <div class="card">
+    <h1>Hai Sayaangg 💕</h1>
+    <p>Hayooo Ini apaa yaaa?</p>
+    <input type="text" id="nameInput" placeholder="Panggilan kesukaanmu">
+    <button onclick="goToPage2()">Masuk</button>
+  </div>
+</section>
+
+<!-- PAGE 2 -->
+<!-- PAGE 2 -->
+<section id="page2" class="screen hidden">
+  <div class="center-wrapper">
+    <div class="card card-large">
+
+      <h2>Hai <span id="userName"></span> 💕</h2>
+      
+
+      <div class="valentine-box">
+        <h3>Akuu ada sedikit pesan buat kamuu 💌</h3>
+        <div class="photo-collage">
+  <img src="foto_1.jpeg">
+  <img src="foto_2.jpeg">
+  <img src="foto_3.jpeg">
+  <img src="foto_4.jpeg">
+</div>
+
+<p class="subtitle">Happy valentine day my sweet and pretty princess 💖. Makasii banyaa yaa sayangg, atas semuaa cinta dan ushaa yang udah kamu kasii ke akuu, atas sabar yang selama ini selalu kamu simpan serta semua perhatian kecil yang selalu kerasaa guedeee banget di aku. Caraku mencintaimu mungkin tidak sesuai dengan apa yang kamu inginkann, but i'll try to be better and i'll always loving you. Honestly, I want you to stay here with me forever. Banyaaa sukaa dukaa yang kitaa udaa jalanin walaupun kitaa masih belumm sempurnaa, setidaknyaa kita bisa saling melengkapi dan saling membangunn sebuah kesempurnaan itu.
+  Sekali lagii Maaf yaa akuu belum bisaa jadii apa yang kamuu mau, aku jugaa masi sering bikin kesalahann. Akuu bersyukurr kita bisa bertemu ditengah hiruk pikuknya dunia yang fana dan sibuk ini. SATU HAL YANG HARUS KAMU INGAT AKU MENCINTAIMU DAN AKAN SELALU BEGITU💖💖💖💖💖💖💖💖</p>
+<p class="subtitle">Aku mau nanya sesuatu yang penting banget nih…</p>
+<h3>Will you be my Valentine?💖 </h3>
+        <div class="btn-group">
+          <button id="yesBtn" onclick="sayYes()">Yes 💖</button>
+          <button id="noBtn" onclick="sayNo()">No 😢</button>
+        </div>
+
+        <p id="warning" class="warning hidden">
+          Ehh kok no 😭 coba pikir lagi dongg
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- PAGE 3 -->
+<section id="page3" class="screen hidden center">
+  <div class="card">
+    <h2>Yay! 💖</h2>
+    <p>Makasih yaa <span id="userName2"></span> udaa mauu nemenin akuu, aku seneng banget 🥰</p>
+<p>Maaf yaa akuu cumaa bisa kasihh dan bikinin kamu website sederhana gini. Maaf yaa kalauu masii banyaa kurangnyaa.</p>
+    
+
+<p class="subtitle">Si Alma beli batik</p>
+<p class="subtitle">Batiknya motif bunga</p>
+<p class="subtitle">Hai cantik</p>
+<p class="subtitle">Aku punya Bunga</p>
+<button onclick="showBouquet()">Mauu liatt gaa? 🌹</button>
+<span class="ribbon">🎀</span>
+    <div id="bouquetArea" class="hidden">
+  <div class="bouquet-frame">
+    <img src="WhatsApp Image 2026-02-10 at 22.57.06.jpeg" alt="Buket Bunga" class="bouquet">
+  </div>
+</div>
+
+  </div>
+
+
+  <!-- Confetti -->
+  <div id="confetti-container"></div>
+
+
+</section>
+</section>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
