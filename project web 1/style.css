@@ -1,0 +1,266 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Pacifico', cursive;
+  background: linear-gradient(135deg, #ffcad4, #ff7ca3);
+  color: white;
+}
+
+/* SCREEN */
+.screen {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  padding: 30px;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.card-large {
+  max-width: 520px;
+}
+
+
+/* CARD */
+.card {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  animation: fadeIn 0.8s ease;
+}
+
+h1, h2 {
+  margin-top: 0;
+}
+
+p {
+  font-size: 1.1em;
+}
+
+/* INPUT & BUTTON */
+input, button {
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  font-family: 'Pacifico', cursive;
+  font-size: 1.1em;
+}
+
+input {
+  color: #ff1493;
+}
+
+button {
+  background: #ff1493;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ff69b4;
+  transform: scale(1.05);
+}
+
+/* VALENTINE BOX */
+.valentine-box {
+  margin-top: 25px;
+  padding: 20px;
+  border: 2px dashed #fff;
+  border-radius: 15px;
+}
+
+.btn-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.btn-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.btn-group button {
+  flex: 1;
+  font-size: 1.1em;
+}
+
+.btn-group button {
+  flex: 1;
+}
+
+/* WARNING */
+.warning {
+  color: yellow;
+  margin-top: 10px;
+}
+
+/* BOUQUET */
+.bouquet {
+  width: 200px;
+  margin-top: 20px;
+  animation: pop 0.8s ease;
+}
+
+/* CONFETTI */
+#confetti span {
+  position: fixed;
+  font-size: 20px;
+  animation: fall 3s linear forwards;
+}
+#confetti-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.confetti {
+  position: absolute;
+  bottom: -10px;
+  width: 8px;
+  height: 14px;
+  opacity: 0.8;
+  animation: floatUp linear forwards;
+  border-radius: 2px;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* UTILITY */
+.hidden {
+  display: none;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {opacity:0; transform:translateY(20px);}
+  to {opacity:1; transform:translateY(0);}
+}
+
+@keyframes pop {
+  from {transform: scale(0);}
+  to {transform: scale(1);}
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .card {
+    padding: 20px;
+  }
+}
+
+.center-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.photo-collage {
+  display: grid;
+  grid-template-columns: repeat(2, 120px);
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.photo-collage img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.photo-collage img:nth-child(odd) {
+  transform: rotate(-3deg);
+}
+
+.photo-collage img:nth-child(even) {
+  transform: rotate(3deg);
+}
+
+.photo-collage img:hover {
+  transform: scale(1.05);
+}
+.bouquet-frame {
+  margin-top: 20px;
+  padding: 18px;
+  background: linear-gradient(135deg, #ffe6ee, #fff);
+  border-radius: 24px;
+  box-shadow:
+    0 12px 30px rgba(0,0,0,0.15),
+    inset 0 0 0 4px #ffb6c1;
+  display: inline-block;
+  animation: popIn 0.6s ease;
+}
+
+.bouquet {
+  width: 220px;
+  border-radius: 16px;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.ribbon {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 28px;
+}
+
